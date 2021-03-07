@@ -1,0 +1,5 @@
+﻿ID,Owner,Ownership,Name,Province,Status,Type,Year,Latitude,Longitude,Capacity
+1,Ontario Power Generation,Provincial,Sir Adam Beck II Power Station,Ontario,In Operation,Hydroelectric,1954,43.15,-79.04,1499
+4,Ontario Power Generation,Provincial,Atikokan-G1,Ontario,In Operation,Biomass,2014,48.838,-91.57,215
+20,Kingston Solar LP,Private,Sol-Luce Kingston Solar PV Energy Project,Ontario,In Operation,Solar,2015,44.312,-76.65,100
+14,,Private,Annapolis Tidal,Nova Scotia,Not In Operation,Tidal,1984,44.75,-65.51,20
