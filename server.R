@@ -22,9 +22,16 @@ shinyServer(function(input, output, session){
     
     # Map definition
     output$map = renderLeaflet({
-        m = leaflet(data=toMap(), options=leafletOptions(minZoom=3)) %>%
+        # Get map center and scroll bounds
+        scrollBounds = map_scroll_bounds(toMap()$Latitude, toMap()$Longitude)
+        mapCenter = scrollBounds$mapCenter
+        scrollBox = scrollBounds$scrollBox
+        
+        m = leaflet(data=toMap(), options=leafletOptions(minZoom=4)) %>%
             addProviderTiles(providers$Stamen.TonerLite, options=providerTileOptions(noWrap=TRUE)) %>%
-            setView(-99, 53, zoom=4)
+            setView(mapCenter[1], mapCenter[2], zoom=4) %>%
+            setMaxBounds(lat1=scrollBox[1], lat2=scrollBox[2],
+                         lng1=scrollBox[3], lng2=scrollBox[4])
         if (nrow(toMap()) > 0){
             m = m %>%
                 addCircleMarkers(~Longitude, ~Latitude,
@@ -106,7 +113,7 @@ shinyServer(function(input, output, session){
             group_by(Province, Type) %>%
             summarize(Count = n(), .groups="drop") %>%
             ggplot(aes(x=Province, y=Count, fill=Type)) +
-            geom_bar(position="dodge", stat="identity") +
+            geom_bar(position=position_dodge2(preserve="single"), stat="identity") +
             xlab(element_blank()) +
             theme(axis.text.x=element_text(angle=45))
         ggplotly(fig) %>%
@@ -116,7 +123,15 @@ shinyServer(function(input, output, session){
     })
     
     output$provincesProjectsTS = renderPlotly({
+        # Sort provinces by cumulative total for legend ordering
+        legendOrder = provinceCounts %>%
+            filter(Year == max(mapData$Year)) %>%
+            arrange(desc(Count)) %>%
+            pull(Province)
+        
+        # Create plot
         fig = provinceCounts %>%
+            mutate(Province = factor(Province, levels=legendOrder)) %>%
             ggplot(aes(x=Year, y=Count, fill=Province)) +
             geom_area()
         ggplotly(fig) %>%
