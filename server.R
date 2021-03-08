@@ -27,18 +27,28 @@ shinyServer(function(input, output, session){
             setView(-99, 53, zoom=4)
         if (nrow(toMap()) > 0){
             m = m %>%
-                addCircles(~Longitude, ~Latitude,
-                           radius=~log(Capacity, 1.001)*20, color=~mapPalette(Type), stroke=FALSE, fillOpacity=0.7,
-                           label=~Name, popup=~PopupText, layerId=~Name) %>%
+                addCircleMarkers(~Longitude, ~Latitude,
+                           radius=~log(Capacity, 1.2), color=~mapPalette(Type), stroke=FALSE, fillOpacity=0.5,
+                           label=~Name, popup=~PopupText, layerId=~Name,
+                           popupOptions=popupOptions(closeButton=FALSE)) %>%
                 addLegend("bottomright", pal=mapPalette, values=sort(unique(toMap()$Type)))
         }
         m
     })
     
     # Marker click EH
-    observeEvent(input$map_shape_click,{
-        updateSelectInput(session, "selectProject", selected=input$map_shape_click$id)
+    observeEvent(input$map_marker_click,{
+        updateSelectInput(session, "selectProject", selected=input$map_marker_click$id)
         updateTabsetPanel(session, "sidebarTabs", selected="Renewable Energy Projects")
+    })
+    
+    # Selected project update EH
+    observeEvent(input$selectProject,{
+        if (input$selectProject != ""){
+            project = filter(mapData, Name == input$selectProject)
+            leafletProxy("map") %>%
+                flyTo(project$Longitude, project$Latitude, 6)
+        }
     })
     
     #######################################################################################

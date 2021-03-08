@@ -49,8 +49,9 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
                         # About section
                         tabPanel("About the App",
                             HTML("<h2>Overview</h2>
-                                 <p>This app allows users to visualize the data collected by members of Swarm C, TSES 3002 Energy and Sustainability, Carleton University Winter 2021. Members of the swarm each collected 
-                                 data about a Canadian renewable energy project, then contributed their data to the swarm."),
+                                 <p>This app allows users to visualize the data collected by members of Swarm C, TSES 3002 Energy and Sustainability, Carleton Unive
+                                 rsity Winter 2021. Members of the swarm each collected data about a Canadian renewable energy project, then contributed their data 
+                                 to the swarm."),
                             HTML("<br><br>"),
                             actionLink("projectsLink", "For a full list of included renewable energy projects, please see the Renewable Energy Projects tab."),
                             HTML("<h2>Contributors</h2>"),
@@ -65,7 +66,7 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
                         tabPanel("Renewable Energy Projects",
                             HTML("<br>"),
                             selectInput("selectProject", "Select a project:",
-                                        choices=sort(mapData$Name)),
+                                        choices=c("", sort(mapData$Name))),
                             
                             # Template
                             titlePanel(HTML("<h3>Template Data</h3>")),
