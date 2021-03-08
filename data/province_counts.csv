@@ -1,0 +1,911 @@
+"Year","Province","Count"
+1890,"Ontario",1
+1890,"Nova Scotia",0
+1890,"Newfoundland and Labrador",0
+1890,"New Brunswick",0
+1890,"British Columbia",0
+1890,"Quebec",0
+1890,"Alberta",0
+1891,"Ontario",1
+1891,"Nova Scotia",0
+1891,"Newfoundland and Labrador",0
+1891,"New Brunswick",0
+1891,"British Columbia",0
+1891,"Quebec",0
+1891,"Alberta",0
+1892,"Ontario",1
+1892,"Nova Scotia",0
+1892,"Newfoundland and Labrador",0
+1892,"New Brunswick",0
+1892,"British Columbia",0
+1892,"Quebec",0
+1892,"Alberta",0
+1893,"Ontario",1
+1893,"Nova Scotia",0
+1893,"Newfoundland and Labrador",0
+1893,"New Brunswick",0
+1893,"British Columbia",0
+1893,"Quebec",0
+1893,"Alberta",0
+1894,"Ontario",1
+1894,"Nova Scotia",0
+1894,"Newfoundland and Labrador",0
+1894,"New Brunswick",0
+1894,"British Columbia",0
+1894,"Quebec",0
+1894,"Alberta",0
+1895,"Ontario",1
+1895,"Nova Scotia",0
+1895,"Newfoundland and Labrador",0
+1895,"New Brunswick",0
+1895,"British Columbia",0
+1895,"Quebec",0
+1895,"Alberta",0
+1896,"Ontario",1
+1896,"Nova Scotia",0
+1896,"Newfoundland and Labrador",0
+1896,"New Brunswick",0
+1896,"British Columbia",0
+1896,"Quebec",0
+1896,"Alberta",0
+1897,"Ontario",1
+1897,"Nova Scotia",0
+1897,"Newfoundland and Labrador",0
+1897,"New Brunswick",0
+1897,"British Columbia",0
+1897,"Quebec",0
+1897,"Alberta",0
+1898,"Ontario",1
+1898,"Nova Scotia",0
+1898,"Newfoundland and Labrador",0
+1898,"New Brunswick",0
+1898,"British Columbia",0
+1898,"Quebec",0
+1898,"Alberta",0
+1899,"Ontario",1
+1899,"Nova Scotia",0
+1899,"Newfoundland and Labrador",0
+1899,"New Brunswick",0
+1899,"British Columbia",0
+1899,"Quebec",0
+1899,"Alberta",0
+1900,"Ontario",1
+1900,"Nova Scotia",0
+1900,"Newfoundland and Labrador",0
+1900,"New Brunswick",0
+1900,"British Columbia",0
+1900,"Quebec",0
+1900,"Alberta",0
+1901,"Ontario",1
+1901,"Nova Scotia",0
+1901,"Newfoundland and Labrador",0
+1901,"New Brunswick",0
+1901,"British Columbia",0
+1901,"Quebec",0
+1901,"Alberta",0
+1902,"Ontario",1
+1902,"Nova Scotia",0
+1902,"Newfoundland and Labrador",0
+1902,"New Brunswick",0
+1902,"British Columbia",0
+1902,"Quebec",0
+1902,"Alberta",0
+1903,"Ontario",1
+1903,"Nova Scotia",0
+1903,"Newfoundland and Labrador",0
+1903,"New Brunswick",0
+1903,"British Columbia",0
+1903,"Quebec",0
+1903,"Alberta",0
+1904,"Ontario",1
+1904,"Nova Scotia",0
+1904,"Newfoundland and Labrador",0
+1904,"New Brunswick",0
+1904,"British Columbia",0
+1904,"Quebec",0
+1904,"Alberta",0
+1905,"Ontario",1
+1905,"Nova Scotia",0
+1905,"Newfoundland and Labrador",0
+1905,"New Brunswick",0
+1905,"British Columbia",0
+1905,"Quebec",0
+1905,"Alberta",0
+1906,"Ontario",1
+1906,"Nova Scotia",0
+1906,"Newfoundland and Labrador",0
+1906,"New Brunswick",0
+1906,"British Columbia",0
+1906,"Quebec",0
+1906,"Alberta",0
+1907,"Ontario",1
+1907,"Nova Scotia",0
+1907,"Newfoundland and Labrador",0
+1907,"New Brunswick",0
+1907,"British Columbia",0
+1907,"Quebec",0
+1907,"Alberta",0
+1908,"Ontario",1
+1908,"Nova Scotia",0
+1908,"Newfoundland and Labrador",0
+1908,"New Brunswick",0
+1908,"British Columbia",0
+1908,"Quebec",0
+1908,"Alberta",0
+1909,"Ontario",1
+1909,"Nova Scotia",0
+1909,"Newfoundland and Labrador",0
+1909,"New Brunswick",0
+1909,"British Columbia",0
+1909,"Quebec",0
+1909,"Alberta",0
+1910,"Ontario",1
+1910,"Nova Scotia",0
+1910,"Newfoundland and Labrador",0
+1910,"New Brunswick",0
+1910,"British Columbia",0
+1910,"Quebec",0
+1910,"Alberta",0
+1911,"Ontario",1
+1911,"Nova Scotia",0
+1911,"Newfoundland and Labrador",0
+1911,"New Brunswick",0
+1911,"British Columbia",0
+1911,"Quebec",0
+1911,"Alberta",0
+1912,"Ontario",1
+1912,"Nova Scotia",0
+1912,"Newfoundland and Labrador",0
+1912,"New Brunswick",0
+1912,"British Columbia",0
+1912,"Quebec",0
+1912,"Alberta",0
+1913,"Ontario",1
+1913,"Nova Scotia",0
+1913,"Newfoundland and Labrador",0
+1913,"New Brunswick",0
+1913,"British Columbia",0
+1913,"Quebec",0
+1913,"Alberta",0
+1914,"Ontario",1
+1914,"Nova Scotia",0
+1914,"Newfoundland and Labrador",0
+1914,"New Brunswick",0
+1914,"British Columbia",0
+1914,"Quebec",0
+1914,"Alberta",0
+1915,"Ontario",1
+1915,"Nova Scotia",0
+1915,"Newfoundland and Labrador",0
+1915,"New Brunswick",0
+1915,"British Columbia",0
+1915,"Quebec",0
+1915,"Alberta",0
+1916,"Ontario",1
+1916,"Nova Scotia",0
+1916,"Newfoundland and Labrador",0
+1916,"New Brunswick",0
+1916,"British Columbia",0
+1916,"Quebec",0
+1916,"Alberta",0
+1917,"Ontario",1
+1917,"Nova Scotia",0
+1917,"Newfoundland and Labrador",0
+1917,"New Brunswick",0
+1917,"British Columbia",0
+1917,"Quebec",0
+1917,"Alberta",0
+1918,"Ontario",1
+1918,"Nova Scotia",0
+1918,"Newfoundland and Labrador",0
+1918,"New Brunswick",0
+1918,"British Columbia",0
+1918,"Quebec",0
+1918,"Alberta",0
+1919,"Ontario",1
+1919,"Nova Scotia",0
+1919,"Newfoundland and Labrador",0
+1919,"New Brunswick",0
+1919,"British Columbia",0
+1919,"Quebec",0
+1919,"Alberta",0
+1920,"Ontario",1
+1920,"Nova Scotia",0
+1920,"Newfoundland and Labrador",0
+1920,"New Brunswick",0
+1920,"British Columbia",0
+1920,"Quebec",0
+1920,"Alberta",0
+1921,"Ontario",2
+1921,"Nova Scotia",0
+1921,"Newfoundland and Labrador",0
+1921,"New Brunswick",0
+1921,"British Columbia",0
+1921,"Quebec",0
+1921,"Alberta",0
+1922,"Ontario",2
+1922,"Nova Scotia",0
+1922,"Newfoundland and Labrador",0
+1922,"New Brunswick",0
+1922,"British Columbia",0
+1922,"Quebec",0
+1922,"Alberta",0
+1923,"Ontario",2
+1923,"Nova Scotia",0
+1923,"Newfoundland and Labrador",0
+1923,"New Brunswick",0
+1923,"British Columbia",0
+1923,"Quebec",0
+1923,"Alberta",0
+1924,"Ontario",2
+1924,"Nova Scotia",0
+1924,"Newfoundland and Labrador",0
+1924,"New Brunswick",0
+1924,"British Columbia",0
+1924,"Quebec",0
+1924,"Alberta",0
+1925,"Ontario",2
+1925,"Nova Scotia",0
+1925,"Newfoundland and Labrador",0
+1925,"New Brunswick",0
+1925,"British Columbia",0
+1925,"Quebec",0
+1925,"Alberta",0
+1926,"Ontario",2
+1926,"Nova Scotia",0
+1926,"Newfoundland and Labrador",0
+1926,"New Brunswick",0
+1926,"British Columbia",0
+1926,"Quebec",0
+1926,"Alberta",0
+1927,"Ontario",2
+1927,"Nova Scotia",0
+1927,"Newfoundland and Labrador",0
+1927,"New Brunswick",0
+1927,"British Columbia",0
+1927,"Quebec",0
+1927,"Alberta",0
+1928,"Ontario",2
+1928,"Nova Scotia",0
+1928,"Newfoundland and Labrador",0
+1928,"New Brunswick",0
+1928,"British Columbia",0
+1928,"Quebec",0
+1928,"Alberta",0
+1929,"Ontario",2
+1929,"Nova Scotia",0
+1929,"Newfoundland and Labrador",0
+1929,"New Brunswick",0
+1929,"British Columbia",0
+1929,"Quebec",0
+1929,"Alberta",0
+1930,"Ontario",2
+1930,"Nova Scotia",0
+1930,"Newfoundland and Labrador",0
+1930,"New Brunswick",0
+1930,"British Columbia",0
+1930,"Quebec",0
+1930,"Alberta",0
+1931,"Ontario",2
+1931,"Nova Scotia",0
+1931,"Newfoundland and Labrador",0
+1931,"New Brunswick",0
+1931,"British Columbia",0
+1931,"Quebec",0
+1931,"Alberta",0
+1932,"Ontario",2
+1932,"Nova Scotia",0
+1932,"Newfoundland and Labrador",0
+1932,"New Brunswick",0
+1932,"British Columbia",0
+1932,"Quebec",0
+1932,"Alberta",0
+1933,"Ontario",2
+1933,"Nova Scotia",0
+1933,"Newfoundland and Labrador",0
+1933,"New Brunswick",0
+1933,"British Columbia",0
+1933,"Quebec",0
+1933,"Alberta",0
+1934,"Ontario",2
+1934,"Nova Scotia",0
+1934,"Newfoundland and Labrador",0
+1934,"New Brunswick",0
+1934,"British Columbia",0
+1934,"Quebec",0
+1934,"Alberta",0
+1935,"Ontario",2
+1935,"Nova Scotia",0
+1935,"Newfoundland and Labrador",0
+1935,"New Brunswick",0
+1935,"British Columbia",0
+1935,"Quebec",0
+1935,"Alberta",0
+1936,"Ontario",2
+1936,"Nova Scotia",0
+1936,"Newfoundland and Labrador",0
+1936,"New Brunswick",0
+1936,"British Columbia",0
+1936,"Quebec",0
+1936,"Alberta",0
+1937,"Ontario",2
+1937,"Nova Scotia",0
+1937,"Newfoundland and Labrador",0
+1937,"New Brunswick",0
+1937,"British Columbia",0
+1937,"Quebec",0
+1937,"Alberta",0
+1938,"Ontario",2
+1938,"Nova Scotia",0
+1938,"Newfoundland and Labrador",0
+1938,"New Brunswick",0
+1938,"British Columbia",0
+1938,"Quebec",0
+1938,"Alberta",0
+1939,"Ontario",2
+1939,"Nova Scotia",0
+1939,"Newfoundland and Labrador",0
+1939,"New Brunswick",0
+1939,"British Columbia",0
+1939,"Quebec",0
+1939,"Alberta",0
+1940,"Ontario",2
+1940,"Nova Scotia",0
+1940,"Newfoundland and Labrador",0
+1940,"New Brunswick",0
+1940,"British Columbia",0
+1940,"Quebec",0
+1940,"Alberta",0
+1941,"Ontario",2
+1941,"Nova Scotia",0
+1941,"Newfoundland and Labrador",0
+1941,"New Brunswick",0
+1941,"British Columbia",0
+1941,"Quebec",0
+1941,"Alberta",0
+1942,"Ontario",3
+1942,"Nova Scotia",0
+1942,"Newfoundland and Labrador",0
+1942,"New Brunswick",0
+1942,"British Columbia",0
+1942,"Quebec",0
+1942,"Alberta",0
+1943,"Ontario",3
+1943,"Nova Scotia",0
+1943,"Newfoundland and Labrador",0
+1943,"New Brunswick",0
+1943,"British Columbia",0
+1943,"Quebec",0
+1943,"Alberta",0
+1944,"Ontario",3
+1944,"Nova Scotia",0
+1944,"Newfoundland and Labrador",0
+1944,"New Brunswick",0
+1944,"British Columbia",0
+1944,"Quebec",0
+1944,"Alberta",0
+1945,"Ontario",3
+1945,"Nova Scotia",0
+1945,"Newfoundland and Labrador",0
+1945,"New Brunswick",0
+1945,"British Columbia",0
+1945,"Quebec",0
+1945,"Alberta",0
+1946,"Ontario",3
+1946,"Nova Scotia",0
+1946,"Newfoundland and Labrador",0
+1946,"New Brunswick",0
+1946,"British Columbia",1
+1946,"Quebec",0
+1946,"Alberta",0
+1947,"Ontario",3
+1947,"Nova Scotia",0
+1947,"Newfoundland and Labrador",0
+1947,"New Brunswick",0
+1947,"British Columbia",1
+1947,"Quebec",0
+1947,"Alberta",0
+1948,"Ontario",3
+1948,"Nova Scotia",0
+1948,"Newfoundland and Labrador",0
+1948,"New Brunswick",0
+1948,"British Columbia",1
+1948,"Quebec",0
+1948,"Alberta",0
+1949,"Ontario",3
+1949,"Nova Scotia",0
+1949,"Newfoundland and Labrador",0
+1949,"New Brunswick",0
+1949,"British Columbia",1
+1949,"Quebec",0
+1949,"Alberta",0
+1950,"Ontario",3
+1950,"Nova Scotia",0
+1950,"Newfoundland and Labrador",0
+1950,"New Brunswick",0
+1950,"British Columbia",1
+1950,"Quebec",0
+1950,"Alberta",0
+1951,"Ontario",3
+1951,"Nova Scotia",0
+1951,"Newfoundland and Labrador",0
+1951,"New Brunswick",0
+1951,"British Columbia",1
+1951,"Quebec",0
+1951,"Alberta",0
+1952,"Ontario",3
+1952,"Nova Scotia",0
+1952,"Newfoundland and Labrador",0
+1952,"New Brunswick",0
+1952,"British Columbia",1
+1952,"Quebec",0
+1952,"Alberta",0
+1953,"Ontario",4
+1953,"Nova Scotia",0
+1953,"Newfoundland and Labrador",0
+1953,"New Brunswick",0
+1953,"British Columbia",1
+1953,"Quebec",0
+1953,"Alberta",0
+1954,"Ontario",4
+1954,"Nova Scotia",0
+1954,"Newfoundland and Labrador",0
+1954,"New Brunswick",0
+1954,"British Columbia",1
+1954,"Quebec",0
+1954,"Alberta",0
+1955,"Ontario",4
+1955,"Nova Scotia",0
+1955,"Newfoundland and Labrador",0
+1955,"New Brunswick",0
+1955,"British Columbia",1
+1955,"Quebec",0
+1955,"Alberta",0
+1956,"Ontario",4
+1956,"Nova Scotia",0
+1956,"Newfoundland and Labrador",0
+1956,"New Brunswick",0
+1956,"British Columbia",1
+1956,"Quebec",0
+1956,"Alberta",0
+1957,"Ontario",4
+1957,"Nova Scotia",0
+1957,"Newfoundland and Labrador",0
+1957,"New Brunswick",0
+1957,"British Columbia",1
+1957,"Quebec",0
+1957,"Alberta",0
+1958,"Ontario",5
+1958,"Nova Scotia",0
+1958,"Newfoundland and Labrador",0
+1958,"New Brunswick",0
+1958,"British Columbia",1
+1958,"Quebec",0
+1958,"Alberta",0
+1959,"Ontario",5
+1959,"Nova Scotia",0
+1959,"Newfoundland and Labrador",0
+1959,"New Brunswick",0
+1959,"British Columbia",1
+1959,"Quebec",0
+1959,"Alberta",0
+1960,"Ontario",5
+1960,"Nova Scotia",0
+1960,"Newfoundland and Labrador",0
+1960,"New Brunswick",0
+1960,"British Columbia",1
+1960,"Quebec",0
+1960,"Alberta",0
+1961,"Ontario",5
+1961,"Nova Scotia",0
+1961,"Newfoundland and Labrador",0
+1961,"New Brunswick",0
+1961,"British Columbia",1
+1961,"Quebec",0
+1961,"Alberta",0
+1962,"Ontario",5
+1962,"Nova Scotia",0
+1962,"Newfoundland and Labrador",0
+1962,"New Brunswick",0
+1962,"British Columbia",1
+1962,"Quebec",0
+1962,"Alberta",0
+1963,"Ontario",5
+1963,"Nova Scotia",0
+1963,"Newfoundland and Labrador",0
+1963,"New Brunswick",0
+1963,"British Columbia",1
+1963,"Quebec",0
+1963,"Alberta",0
+1964,"Ontario",5
+1964,"Nova Scotia",0
+1964,"Newfoundland and Labrador",0
+1964,"New Brunswick",0
+1964,"British Columbia",1
+1964,"Quebec",0
+1964,"Alberta",0
+1965,"Ontario",5
+1965,"Nova Scotia",0
+1965,"Newfoundland and Labrador",0
+1965,"New Brunswick",0
+1965,"British Columbia",1
+1965,"Quebec",0
+1965,"Alberta",0
+1966,"Ontario",5
+1966,"Nova Scotia",0
+1966,"Newfoundland and Labrador",0
+1966,"New Brunswick",0
+1966,"British Columbia",1
+1966,"Quebec",0
+1966,"Alberta",0
+1967,"Ontario",5
+1967,"Nova Scotia",0
+1967,"Newfoundland and Labrador",0
+1967,"New Brunswick",1
+1967,"British Columbia",1
+1967,"Quebec",0
+1967,"Alberta",0
+1968,"Ontario",5
+1968,"Nova Scotia",0
+1968,"Newfoundland and Labrador",0
+1968,"New Brunswick",1
+1968,"British Columbia",1
+1968,"Quebec",0
+1968,"Alberta",0
+1969,"Ontario",5
+1969,"Nova Scotia",0
+1969,"Newfoundland and Labrador",0
+1969,"New Brunswick",1
+1969,"British Columbia",1
+1969,"Quebec",0
+1969,"Alberta",0
+1970,"Ontario",5
+1970,"Nova Scotia",0
+1970,"Newfoundland and Labrador",1
+1970,"New Brunswick",1
+1970,"British Columbia",1
+1970,"Quebec",0
+1970,"Alberta",0
+1971,"Ontario",5
+1971,"Nova Scotia",0
+1971,"Newfoundland and Labrador",1
+1971,"New Brunswick",1
+1971,"British Columbia",1
+1971,"Quebec",0
+1971,"Alberta",0
+1972,"Ontario",5
+1972,"Nova Scotia",0
+1972,"Newfoundland and Labrador",1
+1972,"New Brunswick",1
+1972,"British Columbia",1
+1972,"Quebec",0
+1972,"Alberta",0
+1973,"Ontario",5
+1973,"Nova Scotia",0
+1973,"Newfoundland and Labrador",1
+1973,"New Brunswick",1
+1973,"British Columbia",1
+1973,"Quebec",0
+1973,"Alberta",0
+1974,"Ontario",5
+1974,"Nova Scotia",0
+1974,"Newfoundland and Labrador",1
+1974,"New Brunswick",1
+1974,"British Columbia",1
+1974,"Quebec",0
+1974,"Alberta",0
+1975,"Ontario",5
+1975,"Nova Scotia",0
+1975,"Newfoundland and Labrador",1
+1975,"New Brunswick",1
+1975,"British Columbia",1
+1975,"Quebec",0
+1975,"Alberta",0
+1976,"Ontario",5
+1976,"Nova Scotia",0
+1976,"Newfoundland and Labrador",1
+1976,"New Brunswick",1
+1976,"British Columbia",1
+1976,"Quebec",0
+1976,"Alberta",0
+1977,"Ontario",5
+1977,"Nova Scotia",0
+1977,"Newfoundland and Labrador",1
+1977,"New Brunswick",1
+1977,"British Columbia",1
+1977,"Quebec",0
+1977,"Alberta",0
+1978,"Ontario",5
+1978,"Nova Scotia",0
+1978,"Newfoundland and Labrador",1
+1978,"New Brunswick",1
+1978,"British Columbia",1
+1978,"Quebec",0
+1978,"Alberta",0
+1979,"Ontario",5
+1979,"Nova Scotia",0
+1979,"Newfoundland and Labrador",1
+1979,"New Brunswick",1
+1979,"British Columbia",2
+1979,"Quebec",0
+1979,"Alberta",0
+1980,"Ontario",5
+1980,"Nova Scotia",0
+1980,"Newfoundland and Labrador",1
+1980,"New Brunswick",1
+1980,"British Columbia",2
+1980,"Quebec",1
+1980,"Alberta",0
+1981,"Ontario",5
+1981,"Nova Scotia",0
+1981,"Newfoundland and Labrador",1
+1981,"New Brunswick",1
+1981,"British Columbia",2
+1981,"Quebec",1
+1981,"Alberta",0
+1982,"Ontario",5
+1982,"Nova Scotia",0
+1982,"Newfoundland and Labrador",1
+1982,"New Brunswick",1
+1982,"British Columbia",2
+1982,"Quebec",1
+1982,"Alberta",0
+1983,"Ontario",5
+1983,"Nova Scotia",1
+1983,"Newfoundland and Labrador",1
+1983,"New Brunswick",1
+1983,"British Columbia",3
+1983,"Quebec",1
+1983,"Alberta",0
+1984,"Ontario",5
+1984,"Nova Scotia",1
+1984,"Newfoundland and Labrador",1
+1984,"New Brunswick",1
+1984,"British Columbia",3
+1984,"Quebec",1
+1984,"Alberta",0
+1985,"Ontario",5
+1985,"Nova Scotia",1
+1985,"Newfoundland and Labrador",1
+1985,"New Brunswick",1
+1985,"British Columbia",3
+1985,"Quebec",1
+1985,"Alberta",0
+1986,"Ontario",5
+1986,"Nova Scotia",1
+1986,"Newfoundland and Labrador",1
+1986,"New Brunswick",1
+1986,"British Columbia",3
+1986,"Quebec",1
+1986,"Alberta",0
+1987,"Ontario",5
+1987,"Nova Scotia",1
+1987,"Newfoundland and Labrador",1
+1987,"New Brunswick",1
+1987,"British Columbia",3
+1987,"Quebec",1
+1987,"Alberta",0
+1988,"Ontario",5
+1988,"Nova Scotia",1
+1988,"Newfoundland and Labrador",1
+1988,"New Brunswick",1
+1988,"British Columbia",3
+1988,"Quebec",1
+1988,"Alberta",0
+1989,"Ontario",5
+1989,"Nova Scotia",1
+1989,"Newfoundland and Labrador",1
+1989,"New Brunswick",1
+1989,"British Columbia",3
+1989,"Quebec",1
+1989,"Alberta",0
+1990,"Ontario",5
+1990,"Nova Scotia",1
+1990,"Newfoundland and Labrador",1
+1990,"New Brunswick",1
+1990,"British Columbia",3
+1990,"Quebec",1
+1990,"Alberta",0
+1991,"Ontario",5
+1991,"Nova Scotia",1
+1991,"Newfoundland and Labrador",1
+1991,"New Brunswick",1
+1991,"British Columbia",3
+1991,"Quebec",1
+1991,"Alberta",0
+1992,"Ontario",5
+1992,"Nova Scotia",1
+1992,"Newfoundland and Labrador",1
+1992,"New Brunswick",1
+1992,"British Columbia",3
+1992,"Quebec",1
+1992,"Alberta",0
+1993,"Ontario",5
+1993,"Nova Scotia",1
+1993,"Newfoundland and Labrador",1
+1993,"New Brunswick",1
+1993,"British Columbia",3
+1993,"Quebec",1
+1993,"Alberta",0
+1994,"Ontario",5
+1994,"Nova Scotia",1
+1994,"Newfoundland and Labrador",1
+1994,"New Brunswick",1
+1994,"British Columbia",3
+1994,"Quebec",1
+1994,"Alberta",0
+1995,"Ontario",5
+1995,"Nova Scotia",1
+1995,"Newfoundland and Labrador",1
+1995,"New Brunswick",1
+1995,"British Columbia",3
+1995,"Quebec",1
+1995,"Alberta",0
+1996,"Ontario",5
+1996,"Nova Scotia",1
+1996,"Newfoundland and Labrador",1
+1996,"New Brunswick",1
+1996,"British Columbia",3
+1996,"Quebec",1
+1996,"Alberta",0
+1997,"Ontario",5
+1997,"Nova Scotia",1
+1997,"Newfoundland and Labrador",1
+1997,"New Brunswick",1
+1997,"British Columbia",3
+1997,"Quebec",1
+1997,"Alberta",0
+1998,"Ontario",5
+1998,"Nova Scotia",1
+1998,"Newfoundland and Labrador",1
+1998,"New Brunswick",1
+1998,"British Columbia",3
+1998,"Quebec",1
+1998,"Alberta",0
+1999,"Ontario",7
+1999,"Nova Scotia",1
+1999,"Newfoundland and Labrador",1
+1999,"New Brunswick",1
+1999,"British Columbia",3
+1999,"Quebec",1
+1999,"Alberta",0
+2000,"Ontario",7
+2000,"Nova Scotia",1
+2000,"Newfoundland and Labrador",1
+2000,"New Brunswick",1
+2000,"British Columbia",3
+2000,"Quebec",1
+2000,"Alberta",0
+2001,"Ontario",7
+2001,"Nova Scotia",1
+2001,"Newfoundland and Labrador",1
+2001,"New Brunswick",1
+2001,"British Columbia",4
+2001,"Quebec",1
+2001,"Alberta",0
+2002,"Ontario",7
+2002,"Nova Scotia",1
+2002,"Newfoundland and Labrador",1
+2002,"New Brunswick",1
+2002,"British Columbia",4
+2002,"Quebec",1
+2002,"Alberta",0
+2003,"Ontario",7
+2003,"Nova Scotia",1
+2003,"Newfoundland and Labrador",1
+2003,"New Brunswick",1
+2003,"British Columbia",4
+2003,"Quebec",1
+2003,"Alberta",0
+2004,"Ontario",7
+2004,"Nova Scotia",2
+2004,"Newfoundland and Labrador",1
+2004,"New Brunswick",1
+2004,"British Columbia",4
+2004,"Quebec",1
+2004,"Alberta",0
+2005,"Ontario",8
+2005,"Nova Scotia",2
+2005,"Newfoundland and Labrador",1
+2005,"New Brunswick",1
+2005,"British Columbia",4
+2005,"Quebec",1
+2005,"Alberta",0
+2006,"Ontario",8
+2006,"Nova Scotia",2
+2006,"Newfoundland and Labrador",1
+2006,"New Brunswick",1
+2006,"British Columbia",4
+2006,"Quebec",1
+2006,"Alberta",0
+2007,"Ontario",8
+2007,"Nova Scotia",2
+2007,"Newfoundland and Labrador",1
+2007,"New Brunswick",2
+2007,"British Columbia",4
+2007,"Quebec",1
+2007,"Alberta",0
+2008,"Ontario",11
+2008,"Nova Scotia",2
+2008,"Newfoundland and Labrador",1
+2008,"New Brunswick",2
+2008,"British Columbia",4
+2008,"Quebec",1
+2008,"Alberta",0
+2009,"Ontario",11
+2009,"Nova Scotia",2
+2009,"Newfoundland and Labrador",1
+2009,"New Brunswick",3
+2009,"British Columbia",5
+2009,"Quebec",1
+2009,"Alberta",0
+2010,"Ontario",12
+2010,"Nova Scotia",2
+2010,"Newfoundland and Labrador",1
+2010,"New Brunswick",3
+2010,"British Columbia",5
+2010,"Quebec",1
+2010,"Alberta",0
+2011,"Ontario",13
+2011,"Nova Scotia",2
+2011,"Newfoundland and Labrador",1
+2011,"New Brunswick",3
+2011,"British Columbia",5
+2011,"Quebec",1
+2011,"Alberta",0
+2012,"Ontario",14
+2012,"Nova Scotia",2
+2012,"Newfoundland and Labrador",1
+2012,"New Brunswick",3
+2012,"British Columbia",5
+2012,"Quebec",1
+2012,"Alberta",0
+2013,"Ontario",17
+2013,"Nova Scotia",3
+2013,"Newfoundland and Labrador",1
+2013,"New Brunswick",3
+2013,"British Columbia",7
+2013,"Quebec",1
+2013,"Alberta",1
+2014,"Ontario",20
+2014,"Nova Scotia",3
+2014,"Newfoundland and Labrador",1
+2014,"New Brunswick",3
+2014,"British Columbia",7
+2014,"Quebec",1
+2014,"Alberta",1
+2015,"Ontario",21
+2015,"Nova Scotia",3
+2015,"Newfoundland and Labrador",1
+2015,"New Brunswick",3
+2015,"British Columbia",7
+2015,"Quebec",1
+2015,"Alberta",1
+2016,"Ontario",21
+2016,"Nova Scotia",4
+2016,"Newfoundland and Labrador",1
+2016,"New Brunswick",3
+2016,"British Columbia",7
+2016,"Quebec",1
+2016,"Alberta",1
+2017,"Ontario",22
+2017,"Nova Scotia",5
+2017,"Newfoundland and Labrador",1
+2017,"New Brunswick",3
+2017,"British Columbia",7
+2017,"Quebec",1
+2017,"Alberta",1
+2018,"Ontario",24
+2018,"Nova Scotia",5
+2018,"Newfoundland and Labrador",1
+2018,"New Brunswick",3
+2018,"British Columbia",7
+2018,"Quebec",1
+2018,"Alberta",2
+2019,"Ontario",24
+2019,"Nova Scotia",5
+2019,"Newfoundland and Labrador",1
+2019,"New Brunswick",3
+2019,"British Columbia",7
+2019,"Quebec",1
+2019,"Alberta",2

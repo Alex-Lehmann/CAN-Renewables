@@ -3,8 +3,8 @@ library(shiny)
 shinyServer(function(input, output, session){
     values = reactiveValues()
     
-    #######################################################################################
-    # Map of renewable energy projects ####################################################
+    ################################################################################################################################################################
+    # Map of renewable energy projects #############################################################################################################################
     
     # Map color palette
     mapPalette = colorFactor(c("brown", "red", "#add8e6", "orange", "#00008B", "green"), c("Biomass", "Geothermal", "Hydroelectric", "Solar", "Tidal", "Wind"))
@@ -51,8 +51,8 @@ shinyServer(function(input, output, session){
         }
     })
     
-    #######################################################################################
-    # Project details #####################################################################
+    ################################################################################################################################################################
+    # Project details ##############################################################################################################################################
     
     # Template data
     output$projectTemplate = renderUI({
@@ -70,8 +70,8 @@ shinyServer(function(input, output, session){
         )
     })
     
-    #######################################################################################
-    # About the App panel link EHs ########################################################
+    ################################################################################################################################################################
+    # About the App panel link EHs #################################################################################################################################
     
     # Projects link
     observeEvent(input$projectsLink,{
@@ -87,4 +87,42 @@ shinyServer(function(input, output, session){
     observeEvent(input$referencesLink,{
         updateTabsetPanel(session, "nav", "References")
     })
+    
+    ################################################################################################################################################################
+    # Plots ########################################################################################################################################################
+    
+    # Geography
+    output$provincesPie = renderPlotly({
+        mapData %>%
+            group_by(Province) %>%
+            summarize(Count = n(), .groups="drop") %>%
+            plot_ly(labels=~Province, values=~Count,
+                      type="pie") %>%
+            config(displayModeBar=FALSE)
+    })
+    
+    output$provincesBar = renderPlotly({
+        fig = mapData %>%
+            group_by(Province, Type) %>%
+            summarize(Count = n(), .groups="drop") %>%
+            ggplot(aes(x=Province, y=Count, fill=Type)) +
+            geom_bar(position="dodge", stat="identity") +
+            xlab(element_blank()) +
+            theme(axis.text.x=element_text(angle=45))
+        ggplotly(fig) %>%
+            layout(xaxis=list(fixedrange=TRUE),
+                   yaxis=list(fixedrange=TRUE)) %>%
+            config(displayModeBar = FALSE)
+    })
+    
+    output$provincesProjectsTS = renderPlotly({
+        fig = provinceCounts %>%
+            ggplot(aes(x=Year, y=Count, fill=Province)) +
+            geom_area()
+        ggplotly(fig) %>%
+            layout(xaxis=list(fixedrange=TRUE),
+                   yaxis=list(fixedrange=TRUE)) %>%
+            config(displayModeBar = FALSE)
+    })
+    ################################################################################################################################################################
 })

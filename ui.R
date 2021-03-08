@@ -51,7 +51,9 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
                             HTML("<h2>Overview</h2>
                                  <p>This app allows users to visualize the data collected by members of Swarm C, TSES 3002 Energy and Sustainability, Carleton Unive
                                  rsity Winter 2021. Members of the swarm each collected data about a Canadian renewable energy project, then contributed their data 
-                                 to the swarm."),
+                                 to the swarm.
+                                 <p>The dashboard provides a simple way to interact and explore the collected data. See the Data Visualization page for interpretati
+                                 on and analysis."),
                             HTML("<br><br>"),
                             actionLink("projectsLink", "For a full list of included renewable energy projects, please see the Renewable Energy Projects tab."),
                             HTML("<h2>Contributors</h2>"),
@@ -81,7 +83,44 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
         ), # End of dashboard page
         
         tabPanel("Data Visualization",
-        
+            # Introduction
+            titlePanel(HTML("<h2><b>Introduction</h2></b>")),
+            HTML("<p style='font-size:30px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+                 ua. Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend
+                 erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese
+                 runt mollit anim id est laborum."),
+            hr(), # End of introduction
+            # Geography
+            titlePanel(HTML("<h2><b>Geography</h2></b>")),
+            # Projects per province
+            fluidRow(
+                column(width=6, align="center",
+                       column(width=12, align="left",
+                           wellPanel(
+                               titlePanel(HTML("<h3>Discussion</h3>")),
+                               HTML("<p style='font-size:30px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e
+                                    t dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa
+                                    t. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaeca
+                                    t cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+                           )
+                       )
+                ),
+                column(width=6, align="center",
+                    titlePanel(HTML("<h3>Proportion of Projects by Province<h3>")),
+                    plotlyOutput("provincesPie")
+                )
+            ),
+            fluidRow(
+                column(width=6, align="center",
+                    titlePanel(HTML("<h3>Cumulative Projects per Province</h3>")),
+                    plotlyOutput("provincesProjectsTS")
+                ),
+                column(width=6, align="center",
+                    titlePanel(HTML("<h3>Provincial Projects by Type</h3>")),
+                    plotlyOutput("provincesBar")
+                )
+            ), # End of projects per province
+            hr()
         ), # End of data visualization page
         
         tabPanel("Contributors",
