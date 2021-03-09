@@ -3,7 +3,8 @@
 library(tidyverse)
 
 # Load original data
-renewableProjects = read_csv("data/renewable_projects.csv")
+renewableProjects = read_csv("data/renewable_projects.csv") %>%
+  mutate(Capacity = as.integer(Capacity))
 
 # Create a column with HTML popup text
 mapData = mutate(renewableProjects,
