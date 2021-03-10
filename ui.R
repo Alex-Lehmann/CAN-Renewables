@@ -84,43 +84,81 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
         
         tabPanel("Data Visualization",
             # Introduction
-            titlePanel(HTML("<h2><b>Introduction</h2></b>")),
+            titlePanel(HTML("<h1><b>Introduction</h1></b>")),
             HTML("<p style='font-size:30px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq
                  ua. Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend
                  erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese
                  runt mollit anim id est laborum."),
             hr(), # End of introduction
-            # Geography
-            titlePanel(HTML("<h2><b>Geography</h2></b>")),
-            # Projects per province
-            fluidRow(
-                column(width=6, align="center",
-                       column(width=12, align="left",
-                           wellPanel(
-                               titlePanel(HTML("<h3>Discussion</h3>")),
-                               HTML("<p style='font-size:30px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e
-                                    t dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa
-                                    t. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaeca
-                                    t cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
-                           )
-                       )
-                ),
-                column(width=6, align="center",
-                    titlePanel(HTML("<h3>Proportion of Projects by Province<h3>")),
-                    plotlyOutput("provincesPie")
-                )
-            ),
-            fluidRow(
-                column(width=6, align="center",
-                    titlePanel(HTML("<h3>Cumulative Projects per Province</h3>")),
-                    plotlyOutput("provincesProjectsTS")
-                ),
-                column(width=6, align="center",
-                    titlePanel(HTML("<h3>Provincial Projects by Type</h3>")),
-                    plotlyOutput("provincesBar")
-                )
-            ), # End of projects per province
-            hr()
+            tabsetPanel(type="tabs",
+                # Geography
+                tabPanel("Geography",
+                         # Projects per province
+                         fluidRow(
+                             column(width=6, align="center",
+                                    column(width=12, align="left",
+                                           HTML("<br>"),
+                                           wellPanel(
+                                               HTML("<p style='font-size:30px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi
+                                               dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali
+                                               quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                               nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                               laborum.")
+                                           )
+                                    )
+                             ),
+                             column(width=6, align="center",
+                                    titlePanel(HTML("<h3>Proportion of Projects by Province<h3>")),
+                                    plotlyOutput("provincesPie")
+                             )
+                         ),
+                         fluidRow(
+                             column(width=6, align="center",
+                                    titlePanel(HTML("<h3>Cumulative Projects per Province</h3>")),
+                                    plotlyOutput("provincesProjectsTS")
+                             ),
+                             column(width=6, align="center",
+                                    titlePanel(HTML("<h3>Provincial Projects by Type</h3>")),
+                                    plotlyOutput("provincesBar")
+                             )
+                         ),
+                         hr() # End of projects per province
+                ), # End of geography tab
+                
+                # Energy sources
+                tabPanel("Energy Sources",
+                    # Projects per province
+                    fluidRow(
+                        column(width=6, align="center",
+                            titlePanel(HTML("<h3>Proportion of Projects by Energy Source</h3>")),
+                            plotlyOutput("typePie")
+                        ),
+                        column(width=6, align="center",
+                            titlePanel(HTML("<h3>Cumulative Projects per Energy Source</h3>")),
+                            plotlyOutput("typesProjectsTS")
+                        )
+                    ),
+                    fluidRow(
+                        column(width=6, align="center",
+                            titlePanel(HTML("<h3>Distribution of Energy Capacity per Energy Source</h3>")),
+                            plotlyOutput("typeCapacity")
+                        ),
+                        column(width=6, align="center",
+                               column(width=12, align="left",
+                                   HTML("<br>"),
+                                   wellPanel(
+                                       HTML("<p style='font-size:30px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi
+                                               dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali
+                                               quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                               nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                               laborum.")
+                                      )
+                               )
+                        )
+                    ),
+                    hr() # End of projects per province
+                ) # End of energy sources tab
+            )
         ), # End of data visualization page
         
         tabPanel("Contributors",

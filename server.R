@@ -103,23 +103,11 @@ shinyServer(function(input, output, session){
         mapData %>%
             group_by(Province) %>%
             summarize(Count = n(), .groups="drop") %>%
-            plot_ly(labels=~Province, values=~Count,
-                      type="pie") %>%
+            plot_ly(type="pie", labels=~Province, values=~Count,
+                    texttemplate="%{label}", textposition="inside",
+                    hovertemplate="%{value} Projects<br>%{percent}<extra>%{label}</extra>",
+                    showlegend=FALSE) %>%
             config(displayModeBar=FALSE)
-    })
-    
-    output$provincesBar = renderPlotly({
-        fig = mapData %>%
-            group_by(Province, Type) %>%
-            summarize(Count = n(), .groups="drop") %>%
-            ggplot(aes(x=Province, y=Count, fill=Type)) +
-            geom_bar(position=position_dodge2(preserve="single"), stat="identity") +
-            xlab(element_blank()) +
-            theme(axis.text.x=element_text(angle=45))
-        ggplotly(fig) %>%
-            layout(xaxis=list(fixedrange=TRUE),
-                   yaxis=list(fixedrange=TRUE)) %>%
-            config(displayModeBar = FALSE)
     })
     
     output$provincesProjectsTS = renderPlotly({
@@ -135,9 +123,64 @@ shinyServer(function(input, output, session){
             ggplot(aes(x=Year, y=Count, fill=Province)) +
             geom_area()
         ggplotly(fig) %>%
-            layout(xaxis=list(fixedrange=TRUE),
-                   yaxis=list(fixedrange=TRUE)) %>%
-            config(displayModeBar = FALSE)
+            style(hovertemplate="%{x:.0f}<br>%{y:.0f} Projects") %>%
+            layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
+            config(displayModeBar=FALSE)
     })
+    
+    output$provincesBar = renderPlotly({
+        fig = mapData %>%
+            group_by(Province, Type) %>%
+            summarize(Count = n(), .groups="drop") %>%
+            ggplot(aes(x=Province, y=Count, fill=Type)) +
+            geom_bar(position=position_dodge2(preserve="single"), stat="identity") +
+            xlab(element_blank()) +
+            theme(axis.text.x=element_text(angle=45))
+        ggplotly(fig) %>%
+            style(hovertemplate="%{fullData.name}<br>%{y:.0f} Projects<extra></extra>") %>%
+            layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
+            config(displayModeBar=FALSE)
+    })
+    
+    # Energy source
+    output$typePie = renderPlotly({
+        mapData %>%
+            group_by(Type) %>%
+            summarize(Count = n(), .groups="drop") %>%
+            plot_ly(type="pie", labels=~Type, values=~Count,
+                    texttemplate="%{label}", textposition="inside",
+                    hovertemplate="%{value} Projects<br>%{percent}<extra>%{label}</extra>",
+                    showlegend=FALSE) %>%
+            config(displayModeBar=FALSE)
+    })
+    
+    output$typesProjectsTS = renderPlotly({
+        # Sort provinces by cumulative total for legend ordering
+        legendOrder = typeCounts %>%
+            filter(Year == max(mapData$Year)) %>%
+            arrange(desc(Count)) %>%
+            pull(Type)
+        
+        # Create plot
+        fig = typeCounts %>%
+            mutate(Type = factor(Type, levels=legendOrder)) %>%
+            ggplot(aes(x=Year, y=Count, fill=Type)) +
+            geom_area()
+        ggplotly(fig) %>%
+            style(hovertemplate="%{x:.0f}<br>%{y:.0f} Projects", ".00<br>", "<br>") %>%
+            layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
+            config(displayModeBar=FALSE)
+    })
+    
+    output$typeCapacity = renderPlotly({
+        fig = mapData %>%
+            ggplot(aes(x=Type, y=log(Capacity), fill=Type)) +
+            geom_boxplot() +
+            xlab("Renewable Energy Source")
+        ggplotly(fig) %>%
+            layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
+            config(displayModeBar=FALSE)
+    })
+    
     ################################################################################################################################################################
 })
