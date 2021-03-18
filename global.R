@@ -2,6 +2,7 @@ library(shinythemes)
 library(tidyverse)
 library(leaflet)
 library(plotly)
+library(timevis)
 
 source("fn/map_scroll_bounds.R")
 

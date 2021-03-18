@@ -7,7 +7,8 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
                 mainPanel(
                     # Map panel
                     wellPanel(
-                        leafletOutput("map", height=520)
+                        leafletOutput("map", height=520),
+                        HTML("<i>Click for additional detail. Circle size corresponds to production capacity.</i>")
                     ), # End of map panel
                     
                     # Map settings panel
@@ -75,7 +76,9 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
                             uiOutput("projectTemplate"),
                             
                             # Timeline
-                            titlePanel(HTML("<h3>Project Timeline</h3>"))
+                            titlePanel(HTML("<h3>Project Timeline</h3>")),
+                            timevisOutput("projectTimeline"),
+                            htmlOutput("timelineCitation")
                         ) #End of project information
                     )
                 ) # End of sidebar

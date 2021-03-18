@@ -77,6 +77,51 @@ shinyServer(function(input, output, session){
         )
     })
     
+    # Timeline file loader
+    timelineData = reactive({
+        fileRef = input$selectProject %>%
+            str_replace_all("\\s", "") %>%
+            str_to_lower()
+        fileName = (paste0("timeline_", fileRef, ".csv"))
+        if (fileName %in% list.files("data")){
+            return(read_csv(paste0("data/", fileName)))
+        } else {
+            return(NULL)
+        }
+    })
+    
+    # Timeline
+    output$projectTimeline = renderTimevis({
+        # Blank if no project selected
+        if (is.null(timelineData())) {return(NULL)}
+        
+        # Reformat for timevis timeline
+        data = data.frame(
+            id=row.names(timelineData()),
+            content=timelineData()$Event,
+            start=timelineData()$Date
+        )
+        
+        # Generate timeline
+        timevis(data,
+                fit=TRUE, showZoom=FALSE) %>%
+            setOptions(list(moveable=FALSE, showCurrentTime=FALSE))
+    })
+    
+    output$timelineCitation = renderUI({
+        # Blank if no project selected
+        if (is.null(timelineData())) {return(NULL)}
+        
+        # Instructions if no citation selected
+        if (is.null(input$projectTimeline_selected)) {return(HTML("<i>Click on an event for citation</i>"))}
+        
+        # Get citation
+        citation = timelineData()[input$projectTimeline_selected,]$Citation
+        
+        # Generate HTML element
+        HTML(paste0("<b>Citation:</b> ", citation))
+    })
+    
     ################################################################################################################################################################
     # About the App panel link EHs #################################################################################################################################
     
