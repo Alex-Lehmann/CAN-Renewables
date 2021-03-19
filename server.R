@@ -12,7 +12,7 @@ shinyServer(function(input, output, session){
     # Filtering for map display options
     toMap = reactive({
         filter(mapData,
-               Year >= input$paramYears[1], Year <= input$paramYears[2],
+               (Year >= input$paramYears[1] & Year <= input$paramYears[2]) | ("In Development" %in% input$paramStatus & Status == "In Development"),
                Province %in% input$paramProvince,
                Ownership %in% input$paramOwnership,
                Capacity >= input$paramCapacity[1], Capacity <= input$paramCapacity[2],
@@ -84,7 +84,7 @@ shinyServer(function(input, output, session){
             str_to_lower()
         fileName = (paste0("timeline_", fileRef, ".csv"))
         if (fileName %in% list.files("data")){
-            return(read_csv(paste0("data/", fileName)))
+            return(read_csv(paste0("data/", fileName), col_types=cols()))
         } else {
             return(NULL)
         }
@@ -145,13 +145,23 @@ shinyServer(function(input, output, session){
     
     # Geography
     output$provincesPie = renderPlotly({
-        mapData %>%
+        # Sort order
+        df = mapData %>%
             group_by(Province) %>%
-            summarize(Count = n(), .groups="drop") %>%
-            plot_ly(type="pie", labels=~Province, values=~Count,
-                    texttemplate="%{label}", textposition="inside",
-                    hovertemplate="%{value} Projects<br>%{percent}<extra>%{label}</extra>",
-                    showlegend=FALSE) %>%
+            summarize(Count = n(), .groups="drop")
+        sortOrder = df %>%
+            arrange(Count) %>%
+            pull(Province)
+        
+        # Plot
+        fig = df%>%
+            mutate(Province = factor(Province, levels=sortOrder)) %>%
+            ggplot(aes(x=Count, y=Province, fill=Province)) +
+            geom_segment(aes(x=0, xend=Count, y=Province, yend=Province, size=1.5)) +
+            geom_point(aes(size=2))
+        ggplotly(fig) %>%
+            style(hovertemplate="%{fullData.name}<br>%{x:.0f} Projects<extra></extra>") %>%
+            layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
             config(displayModeBar=FALSE)
     })
     
@@ -188,7 +198,7 @@ shinyServer(function(input, output, session){
     })
     
     # Energy source
-    output$typePie = renderPlotly({
+    output$energyType = renderPlotly({
         mapData %>%
             group_by(Type) %>%
             summarize(Count = n(), .groups="drop") %>%
@@ -222,6 +232,37 @@ shinyServer(function(input, output, session){
             ggplot(aes(x=Type, y=log(Capacity), fill=Type)) +
             geom_boxplot() +
             xlab("Renewable Energy Source")
+        ggplotly(fig) %>%
+            layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
+            config(displayModeBar=FALSE)
+    })
+    
+    # Ownership
+    output$ownershipAlluvial = renderPlot({
+        mapData %>%
+            mutate(Ownership = ifelse(Ownership == "Private", "Private",
+                               ifelse(Ownership == "Joint", "Joint", "Public"))) %>%
+            select(Ownership, Province, Type) %>%
+            group_by(Ownership, Type, Province) %>%
+            summarize(Count = n(), .groups="drop") %>%
+            
+            ggplot(aes(y=Count, axis1=Province, axis2=Ownership, axis3=Type)) +
+            geom_alluvium(aes(fill=Ownership), width=1/12) +
+            geom_stratum(width=1/6, fill="black", color="white") +
+            geom_label(stat="stratum", aes(label=after_stat(stratum))) +
+            
+            scale_x_discrete(limits=c("Province", "Ownership Type", "Renewable Energy Source"), expand=c(.05, .05)) +
+            theme(text=element_text(size=16),
+                  axis.text.x=element_text(size=16))
+    })
+    
+    output$ownershipCapacity = renderPlotly({
+        fig = mapData %>%
+            mutate(Ownership = ifelse(Ownership == "Private", "Private",
+                               ifelse(Ownership == "Joint", "Joint", "Public"))) %>%
+            ggplot(aes(x=Ownership, y=log(Capacity), fill=Ownership)) +
+            geom_boxplot() +
+            xlab("Ownership")
         ggplotly(fig) %>%
             layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
             config(displayModeBar=FALSE)

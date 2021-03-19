@@ -17,9 +17,11 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
                         fluidRow(
                             # Time and geography settings
                             column(width=6, align="center",
-                                sliderInput("paramYears", "Time span:",
-                                            min=min(mapData$Year), max=max(mapData$Year), value=c(min(mapData$Year), max(mapData$Year)),
-                                            ticks=FALSE, sep=""),
+                                   fluidRow(
+                                       sliderInput("paramYears", "Time span:",
+                                                   min=min(mapData$Year), max=max(mapData$Year), value=c(min(mapData$Year), max(mapData$Year)),
+                                                   ticks=FALSE, sep="")
+                                   ),
                                 checkboxGroupInput("paramProvince", "Province:",
                                                    choices=sort(unique(mapData$Province)), selected=sort(unique(mapData$Province)),
                                                    inline=TRUE),
@@ -134,7 +136,7 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
                     fluidRow(
                         column(width=6, align="center",
                             titlePanel(HTML("<h3>Proportion of Projects by Energy Source</h3>")),
-                            plotlyOutput("typePie")
+                            plotlyOutput("energyType")
                         ),
                         column(width=6, align="center",
                             titlePanel(HTML("<h3>Cumulative Projects per Energy Source</h3>")),
@@ -160,7 +162,28 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
                         )
                     ),
                     hr() # End of projects per province
-                ) # End of energy sources tab
+                ), # End of energy sources tab
+                
+                # Ownership
+                tabPanel("Ownership",
+                    fluidRow(
+                        column(width=8, align="center",
+                            titlePanel(HTML("<h3>Projects by Ownership Type</h3>")),
+                            plotOutput("ownershipAlluvial")
+                        ),
+                        column(width=4, align="center",
+                            titlePanel(HTML("<h3>Distribution of Energy Capacity by Ownership Type</h3>")),
+                            plotlyOutput("ownershipCapacity")
+                        )
+                    ),
+                    wellPanel(
+                        HTML("<p style='font-size:30px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi
+                                               dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali
+                                               quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                               nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                               laborum.")
+                    )
+                )
             )
         ), # End of data visualization page
         

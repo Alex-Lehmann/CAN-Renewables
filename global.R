@@ -3,6 +3,7 @@ library(tidyverse)
 library(leaflet)
 library(plotly)
 library(timevis)
+library(ggalluvial)
 
 source("fn/map_scroll_bounds.R")
 
