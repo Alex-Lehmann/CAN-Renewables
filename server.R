@@ -7,7 +7,7 @@ shinyServer(function(input, output, session){
     # Map of renewable energy projects #############################################################################################################################
     
     # Map color palette
-    mapPalette = colorFactor(c("brown", "red", "#add8e6", "orange", "#00008B", "green"), c("Biomass", "Geothermal", "Hydroelectric", "Solar", "Tidal", "Wind"))
+    mapPalette = colorFactor(energyColors, energyTypes)
     
     # Filtering for map display options
     toMap = reactive({
@@ -105,7 +105,7 @@ shinyServer(function(input, output, session){
         # Generate timeline
         timevis(data,
                 fit=TRUE, showZoom=FALSE) %>%
-            setOptions(list(moveable=FALSE, showCurrentTime=FALSE))
+            setOptions(list(showCurrentTime=FALSE))
     })
     
     output$timelineCitation = renderUI({
@@ -158,7 +158,8 @@ shinyServer(function(input, output, session){
             mutate(Province = factor(Province, levels=sortOrder)) %>%
             ggplot(aes(x=Count, y=Province, fill=Province)) +
             geom_segment(aes(x=0, xend=Count, y=Province, yend=Province, size=1.5)) +
-            geom_point(aes(size=2))
+            geom_point(aes(size=2)) +
+            scale_fill_manual(values=provinceColors, breaks=provinces)
         ggplotly(fig) %>%
             style(hovertemplate="%{fullData.name}<br>%{x:.0f} Projects<extra></extra>") %>%
             layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
@@ -176,7 +177,8 @@ shinyServer(function(input, output, session){
         fig = provinceCounts %>%
             mutate(Province = factor(Province, levels=legendOrder)) %>%
             ggplot(aes(x=Year, y=Count, fill=Province)) +
-            geom_area()
+            geom_area() +
+            scale_fill_manual(values=provinceColors, breaks=provinces)
         ggplotly(fig) %>%
             style(hovertemplate="%{x:.0f}<br>%{y:.0f} Projects") %>%
             layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
@@ -190,7 +192,8 @@ shinyServer(function(input, output, session){
             ggplot(aes(x=Province, y=Count, fill=Type)) +
             geom_bar(position=position_dodge2(preserve="single"), stat="identity") +
             xlab(element_blank()) +
-            theme(axis.text.x=element_text(angle=45))
+            theme(axis.text.x=element_text(angle=45)) +
+            scale_fill_manual(values = energyColors, breaks = energyTypes)
         ggplotly(fig) %>%
             style(hovertemplate="%{fullData.name}<br>%{y:.0f} Projects<extra></extra>") %>%
             layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
@@ -220,7 +223,8 @@ shinyServer(function(input, output, session){
         fig = typeCounts %>%
             mutate(Type = factor(Type, levels=legendOrder)) %>%
             ggplot(aes(x=Year, y=Count, fill=Type)) +
-            geom_area()
+            geom_area() +
+            scale_fill_manual(values = energyColors, breaks = energyTypes)
         ggplotly(fig) %>%
             style(hovertemplate="%{x:.0f}<br>%{y:.0f} Projects", ".00<br>", "<br>") %>%
             layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
@@ -231,7 +235,8 @@ shinyServer(function(input, output, session){
         fig = mapData %>%
             ggplot(aes(x=Type, y=log(Capacity), fill=Type)) +
             geom_boxplot() +
-            xlab("Renewable Energy Source")
+            xlab("Renewable Energy Source") +
+            scale_fill_manual(values = energyColors, breaks = energyTypes)
         ggplotly(fig) %>%
             layout(xaxis=list(fixedrange=TRUE), yaxis=list(fixedrange=TRUE)) %>%
             config(displayModeBar=FALSE)
