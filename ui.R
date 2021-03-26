@@ -189,10 +189,6 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
         
         tabPanel("Contributors",
             
-        ), # End of contributors page
-        
-        tabPanel("References",
-            
-        ) # End of reference page
+        ) # End of contributors page
     )
 ))
