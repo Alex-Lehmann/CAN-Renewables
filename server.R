@@ -130,11 +130,6 @@ shinyServer(function(input, output, session){
         updateTabsetPanel(session, "sidebarTabs", "Renewable Energy Projects")
     })
     
-    # Contributors link
-    observeEvent(input$contributorsLink,{
-        updateTabsetPanel(session, "nav", "Contributors")
-    })
-    
     # Citations link
     observeEvent(input$referencesLink,{
         updateTabsetPanel(session, "nav", "References")

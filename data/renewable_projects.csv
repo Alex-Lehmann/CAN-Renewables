@@ -13,19 +13,16 @@ NB Power,Provincial,Mactaquac Hydro,New Brunswick,In Operation,Hydroelectric,196
 Columbia (50%)/Columbia Basin Trust (50%),Public,Arrow Lakes,British Columbia,In Operation,Hydroelectric,2002,49.34,-117.77,185
 BC Hydro,Provincial,John Hart,British Columbia,In Operation,Hydroelectric,1947,50.04,-125.31,126
 BC Hydro,Provincial,Peace Canyon,British Columbia,In Operation,Hydroelectric,1980,55.98,-121.99,694
-Ontario Power Generation,Provincial,Sir Adam Beck 1 Generaring Station,Ontario,In Operation,Hydroelectric,1922,43.1492,-79.0443,450
+Ontario Power Generation,Provincial,Sir Adam Beck 1 Generating Station,Ontario,In Operation,Hydroelectric,1922,43.1492,-79.0443,450
 Pic River First Nation,Community - First Nation,Twin Falls (Kagiano),Ontario,In Operation,Hydroelectric,2000,49.19,-86.12,5
-Ontario Power Generation,Provincial,Sir Adam Beck II Power Station,Ontario,In Operation,Hydroelectric,1954,43.15,-79.04,1499
-BC Hydro,Provincial,Revelstoke Dam,British Columbia,In Operation,Hydroelectric,1984,51.05,-118.19,2480
+Ontario Power Generation,Provincial,Sir Adam Beck 2 Power Station,Ontario,In Operation,Hydroelectric,1954,43.15,-79.04,1499
 AltaGas,Private,Forrest Kerr,British Columbia,In Operation,Hydroelectric,2014,56.72,-130.7,195
-Hydro Quebec,Provincial,Robert-Bourassa Generating Station,Quebec,In Operation,Hydroelectric,1981,53.8,-77.44,5616
 Kingston Solar LP,Private,Sol-Luce Kingston Solar PV Energy Project,Ontario,In Operation,Solar,2015,44.312,-76.65,100
 "Samsung Construction & Trading Corporation, Conner Clark & Lunn Infrastructure",Private,Southgate Solar LP,Ontario, In Operation,Solar,2016,44.1,-80.75,50
 Spark Solar,Private,Sunny Shores Solar Project (Glen Manor),Ontario,In Operation,Solar,2014,44.06,-77.15,10
 Nanticoke Solar Inc.,Joint,Nanticoke Solar Project,Ontario,In Development,Solar,2019,42.812,-80.063,50
 EDF Renewables and Enbridge,Private,Vulcan Solar Project,Alberta,In Development,Solar,2019,50.095,-112.821,77
 Kimberly,Private,Kimberly SunMine,British Columbia,In Operation,Solar,2014,44.669724,-115.977501,1.05
-Barlow Energy GP Inc.,Private,Barlow Solar Energy Centre,Ontario,In Development,Solar,2018,45.045,-74.81,10
 ,Private,Annapolis Tidal,Nova Scotia,Not In Operation,Tidal,1984,44.75,-65.51,20
 Emera and OpenHydro,Private,Cape Sharp,Nova Scotia,In Operation,Tidal,2018,45.37,-64.4,4
 TerraForm Power,Private,The Raleigh Wind Energy Centre,Ontario,In Operation,Wind,2011,42.27,-82.18,78
@@ -42,3 +39,6 @@ Canadian Renewable Energy Corporation,Private,Wolfe Island,Ontario,In Operation,
 Greta Valley Wind Farm,Private,Grand Valley Wind Phases 1 and 2,Ontario,In Operation,Wind,2012,44.01,-80.36,19.8
 Niagara Region Wind Corporation,Private,Niagara Region Wind Farm,Ontario,In Operation,Wind,2015,43.027,-79.666,230
 EDP Renewables Canada Ltd.,Private,Nation Rise Wind Farm,Ontario,In Development,Wind,2019,45.227,-75.204,100
+Ontario Power Generation,Provincial,Abitibi Canyon,Ontario,In Operation,Hydroelectric,1933,49.88,-81.57,349
+H2O Power and First Light,Private,Island Falls,Ontario,In Operation,Hydroelectric,2009,49.58,-81.31,38
+Greengate power Corporation,Private,Travers Solar project,Alberta,In Development,Solar,2020,50.2543,-112.7308,400
