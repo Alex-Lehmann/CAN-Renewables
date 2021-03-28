@@ -131,8 +131,8 @@ shinyServer(function(input, output, session){
     })
     
     # Citations link
-    observeEvent(input$referencesLink,{
-        updateTabsetPanel(session, "nav", "References")
+    observeEvent(input$contributorsLink,{
+        updateTabsetPanel(session, "nav", "Contributors")
     })
     
     ################################################################################################################################################################
