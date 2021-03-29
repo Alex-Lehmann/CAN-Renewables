@@ -70,6 +70,7 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
                             # Template
                             titlePanel(HTML("<h3>Template Data</h3>")),
                             uiOutput("projectTemplate"),
+                            HTML("Parkins, J., Adamowicz, V., Deacon L. et al. (2021). <i>Canadian Renewable Energy Project Map</i>. University of Alberta. Retrieved from <a href=’https://www.futureenergysystems.ca/resources/renewable-energy-projects-canada’>https://www.futureenergysystems.ca/resources/renewable-energy-projects-canada</a>"),
                             
                             # Timeline
                             titlePanel(HTML("<h3>Project Timeline</h3>")),
@@ -177,6 +178,7 @@ shinyUI(fluidPage(theme=shinytheme("cosmo"),
         
         tabPanel("Contributors",
             HTML("Jeff Jose<br>
+                 Gurnoor Judge<br>
                  Radhika Kamra<br>
                  Sabrina Khaddaj<br>
                  Zaynne Khamissa<br>
